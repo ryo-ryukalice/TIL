@@ -70,3 +70,30 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
 ```
+
+config/database.yml.github-actions
+
+```yml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: sharetil_development
+
+test:
+  <<: *default
+  database: sharetil_test
+  host: localhost
+  port: 5432
+  username: <%= ENV.fetch("POSTGRES_USER") { 5 } %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { 5 } %>
+
+production:
+  <<: *default
+  database: sharetil_production
+  username: sharetil
+  password: <%= ENV['SHARETIL_DATABASE_PASSWORD'] %>
+```
