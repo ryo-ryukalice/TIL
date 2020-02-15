@@ -1,5 +1,4 @@
 Ruby 2.7 と PostgreSQL で Rubocop と RSpec を通す。
-キャッシュの挙動が少し怪しい気がする。  
 
 また、`actions/setup-ruby` よりも `ruby/setup-ruby` を使った方が良いとのこと。  
 参考: https://mstshiwasaki.hatenablog.com/entry/2020/02/08/130844
@@ -48,7 +47,7 @@ jobs:
         run: sudo apt-get install libpq-dev
 
       - name: Bundle install
-        run: bundle install --jobs 4 --retry 3
+        run: bundle install --jobs 4 --retry 3 --path vendor/bundle
 
       - name: Setup Database
         run: |
