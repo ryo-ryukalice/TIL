@@ -1,6 +1,6 @@
 turbolinks が生きている環境で `ReactDOM.render()` を `DOMContentLoaded` イベントで行うと 
 
-```
+```tsx
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <App />,
