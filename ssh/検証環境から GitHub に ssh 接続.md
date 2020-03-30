@@ -4,7 +4,7 @@ $ vi ~/.ssh/config
 
 Host repo_name
   HostName github.com
-  IdentityFile ~/.ssh/front
+  IdentityFile ~/.ssh/repo_name
   User git
 
 $ git clone repo_name:xxx/xxxx.git
