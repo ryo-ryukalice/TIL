@@ -6,10 +6,6 @@ import styled from 'styled-components'
 
 import GoogleMapReact from 'google-map-react';
 
-const MapTittle = styled.h1`
-  color: #016AC4;
-  text-align: center;
-`
 const Pin = styled.div<{
   lat: number,
   lng: number
@@ -43,3 +39,4 @@ const Map = () => (
 
 export default Map
 ```
+
