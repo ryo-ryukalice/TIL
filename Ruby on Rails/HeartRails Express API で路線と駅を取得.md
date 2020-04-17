@@ -14,4 +14,14 @@
       res = Net::HTTP.get(URI("http://express.heartrails.com/api/json?method=getStations&#{{ line: line }.to_query}"))
       JSON.parse(res)['response']['station'].map { |s| s.slice('name', 'prefecture', 'line', 'x', 'y') }
     end
- ```
+```
+
+```zsh
+> lines
+=> ["JR函館支線",
+ "JR函館本線",
+
+> stations
+=> [{"name"=>"大沼", "prefecture"=>"北海道", "line"=>"JR函館支線", "x"=>140.669347, "y"=>41.971954},
+ {"name"=>"池田園", "prefecture"=>"北海道", "line"=>"JR函館支線", "x"=>140.700333, "y"=>41.990692},
+```
